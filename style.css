@@ -78,4 +78,9 @@ button {
     width: 700px;
     height: 500px;
     background-color: gray;
+    display: grid;
+}
+
+.gridItem {
+    background-color: aqua;
 }
