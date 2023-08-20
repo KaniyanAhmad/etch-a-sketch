@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="./style.css" rel="stylesheet" />
-    <script src="./javascript.js"></script>
+    <script src="./javascript.js" defer></script>
 
     <title>Etch-a-Sketch</title>
 
@@ -11,6 +11,43 @@
 <body>
     
     
+    <div id="mainWindow">
+        <!-- Grid Controls -->
+        <div id="gridControls">
+            <p>
+                Etch-a-Sketch
+            </p>
+
+            <div>
+                <div id="colorWheel">
+                    <input type="color" id="colorSelector" value="#ff0000">
+                </div>
+
+                <div id="rainbow">
+                    <button>Rainbow Mode</button>
+                </div>
+
+                <div id="shading">
+                    <button>Shading Mode</button>
+                </div>
+            </div>
+
+            <div>
+                <div id="gridSlider">
+                    <input type="range" min="1" max="100" value="50" id="slider">
+                    <p><br>50</p>
+                </div>
+
+                <div id="clear">
+                    <button>Clear</button>
+                </div>
+            </div>
+        </div>
+        <!-- Grid Box -->
+        <div id="gridContainer">
+           
+        </div>
+    </div>
 
 </body>
 </html>
