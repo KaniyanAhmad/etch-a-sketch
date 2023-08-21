@@ -77,10 +77,10 @@ button {
 #gridContainer {
     width: 700px;
     height: 500px;
-    background-color: gray;
+    border: 2px solid gray;
     display: grid;
 }
 
 .gridItem {
-    background-color: aqua;
+    background-color: white;
 }
