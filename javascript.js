@@ -1,16 +1,14 @@
 
 
 const gridContainer = document.getElementById('gridContainer');
-const sliderValue = document.getElementById('slider');
 const gridItem = document.querySelectorAll('#gridContainer > *');
 
 const clearBtn = document.querySelector('#clear > button');
 
 
-let sliderNewValue = sliderValue.value;
-
-//div generator
+//grid generator
 function gridGenerator(x) {
+    gridRemover();
     gridContainer.style.gridTemplateColumns = `repeat(${x}, 1fr)`;
     
     for (let row = 0; row < x; row++) {
@@ -20,7 +18,8 @@ function gridGenerator(x) {
             gridContainer.appendChild(box);
     
             box.addEventListener('mouseover', function () {
-                box.style.backgroundColor = 'black';
+                const gridColor = document.getElementById('gridColor').value;
+                box.style.backgroundColor = `${gridColor}`;
             });
 
         }
@@ -47,5 +46,13 @@ clearBtn.onclick = function () {
     clearGridColors();
 };
 
+//gridGenerator caller on the change of the value of the slider
+function gridGeneratorCaller() {
+    const sliderValue = document.getElementById('rangeInput').value;
+    gridGenerator(sliderValue);
+    
+}
 
+//Default Grid
+gridGenerator(16);
 

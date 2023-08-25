@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background: #e0e0e0;
 }
 
 #mainWindow {
@@ -19,14 +19,16 @@ body {
 #gridControls {
     width: 300px;
     height: 500px;
-
     border: 1px solid black;
-
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     gap: 20px;
+    border-radius: 50px;
+    border-color: transparent;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
 }
 
 #gridControls > div{
@@ -44,13 +46,10 @@ body {
     align-items: center;
 }
 
-/* #gridControls > div:nth-child(1) {
-    
-} */
-
-/* #colorSelector {
-    
-} */
+#gridControls > p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
 
 input[type="color"] {
     appearance: none;
@@ -64,7 +63,7 @@ input[type="color"] {
     width: 35px;
 }
 
-#colorSelector::-webkit-color-swatch {
+#gridColor::-webkit-color-swatch {
     border-color: transparent;
     border-radius: 50%;
 }
@@ -72,6 +71,9 @@ input[type="color"] {
 button {
     width: 200px;
     height: 50px;
+    border-radius: 50px;
+    border-color: transparent;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
 }
 
 #gridContainer {
@@ -79,6 +81,11 @@ button {
     height: 500px;
     border: 2px solid gray;
     display: grid;
+    border-radius: 5px;
+    
+
+    background: #e0e0e0;
+    box-shadow:  20px 20px 5px #bebebe,-20px -20px 60px #ffffff;
 }
 
 .gridItem {

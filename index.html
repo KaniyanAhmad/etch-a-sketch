@@ -20,22 +20,18 @@
 
             <div>
                 <div id="colorWheel">
-                    <input type="color" id="colorSelector" value="#ff0000">
+                    <input type="color" id="gridColor" value="#000000">
                 </div>
 
                 <div id="rainbow">
                     <button>Rainbow Mode</button>
                 </div>
-
-                <div id="shading">
-                    <button>Shading Mode</button>
-                </div>
             </div>
 
             <div>
                 <div id="gridSlider">
-                    <input type="range" min="1" max="100" value="50" id="slider">
-                    <p><br>50</p>
+                    <input type="range" id="rangeInput" name="rangeInput" min="16" max="64" value="16" oninput="amount.value=rangeInput.value" onchange="gridGeneratorCaller()">                                                       
+                    <output id="amount" name="amount" for="rangeInput"></output>
                 </div>
 
                 <div id="clear">
